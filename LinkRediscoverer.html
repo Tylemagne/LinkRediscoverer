@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>LinkRediscoverer 1.0</title>
+<script type="text/javascript">
+
+var URLs = new Array();
+
+//increment the number by one and paste your URLs here
+URLs[0] = "https://www.google.com/";
+URLs[0] = "https://www.github.com/notifications";
+URLs[1] = "https://www.reddit.com/r/gifrecipes/top/?sort=top&t=week";
+
+function openURL()
+{
+  var i = Math.floor(Math.random() * URLs.length);
+  parent.location = URLs[i];
+  return false;
+}
+
+</script>
+</head>
+<body onload='setTimeout(function(){openURL()}, Math.floor((Math.random() * 2000) + 2000));'>
+
+Loading random page after random wait time between 2-4 seconds so not all tabs try to load at once...
+
+</body>
+</html>
